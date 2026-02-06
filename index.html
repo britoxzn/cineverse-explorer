@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="splash-screen">
+    <div class="splash-content">
+        <h1 class="splash-logo"> CineVerse</h1>
+        <div class="splash-loader"></div>
+    </div>
+</div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <header>
+        <div class="logo"> CineVerse</div>
+        <nav>
+            <button onclick="limparBusca()" class="nav-btn"> Início</button>
+            <button onclick="carregarFavoritos()" class="nav-btn destaque"> Favoritos</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O mundo do cinema em suas mãos</h1>
+            <p>Explore filmes, veja notas e salve seus favoritos.</p>
+            
+            <div class="search-box">
+                <input type="text" id="busca" placeholder="Vingadores, Matrix, Avatar...">
+                <button onclick="buscarFilmes()">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h2 id="titulo-secao" class="section-title">Filmes em Alta</h2>
+        
+        <div id="loader" class="loader-container" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="grade-filmes" class="movie-grid">
+            </div>
+    </main>
+
+    <div id="modal-detalhes" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharModal()">&times;</span>
+            <div id="conteudo-modal">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
